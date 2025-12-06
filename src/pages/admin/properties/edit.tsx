@@ -1,19 +1,16 @@
 import { useState, useEffect } from 'react'
-import { Box, Button, Card, CardContent, FormControl, InputLabel, MenuItem, Select, Stack, TextField, Typography, IconButton } from '@mui/material'
+import { Button, Card, CardContent, FormControl, InputLabel, MenuItem, Select, Stack, TextField, Typography } from '@mui/material'
 import { Row, Col } from 'react-bootstrap'
 import AdminLayout from '../../../components/admin/AdminLayout'
 import Toast from '../../../components/admin/Toast'
 import { useNavigate, useParams } from 'react-router-dom'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import AddIcon from '@mui/icons-material/Add'
-import CloseIcon from '@mui/icons-material/Close'
 import img1 from '../../../assets/images/filter-1.svg'
 
 export default function EditProperty() {
   const navigate = useNavigate()
   const { id } = useParams()
   const [toastOpen, setToastOpen] = useState(false)
-  const [newAmenity, setNewAmenity] = useState('')
       // const [customAmenities, setCustomAmenities] = useState<string[]>([])
   const [formData, setFormData] = useState({
     title: '',
